@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.button {
+    background-color: #61DAFB;
+    color: black;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.comic {
+    margin-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 3rem;
+}
+
+.buttons {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.disabled {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1rem;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.navBar {
+    padding: 0.5rem;
+    background-color: black;
+    color: #61DAFB;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.leftMargin {
+    margin-left: 2rem;
+}

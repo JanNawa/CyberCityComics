@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cyber City Comics</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <header class="navBar">
+        <h2>Cyber City Comics</h2>
+    </header>
+
+    <div class="comicStrip">
+        <header>
+            <h2>
+                <%=data.safe_title%>
+            </h2>
+        </header>
+        <header>
+            <p>Created at: <%=data.year%>-<%=data.month%>-<%=data.day%>
+                <span class="leftMargin">Read: <%=count%></span>
+            </p>
+            <div class="buttons">
+                <a class="button <%if (data.num == 1) {%>  disabled  <%}%>" href="/comic/<%=data.num-1%>">
+                    < Previous
+                </a>
+                <a class="button" href="/comic/<%= Math.floor(Math.random() * maxComic) + 1%>">
+                    Random
+                </a>
+                <a class="button <%if (data.num == maxComic) {%>  disabled  <%}%>" href="/comic/<%=data.num+1%>">
+                    Next >
+                </a>
+            </div>
+        </header>
+        <div class="comic">
+            <img src=<%=data.img%>
+            alt=<%=data.alt%> />
+                <p>
+                    <% var transcriptArray=data.transcript.split("\n") %>
+                        <% transcriptArray.forEach(function(text) { %>
+                            <%=text.replace( /\[|\]|\{|\}/g, '' )%><br>
+                        <% }); %>
+                </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
